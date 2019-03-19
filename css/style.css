@@ -1,0 +1,270 @@
+@import url('reset.css');
+
+body {
+    background: #fff;
+    color: #000;
+    font-family: 'PT Sans Narrow', Arial, sans-serif;
+    font-size: 16px;
+}
+
+.content {
+    /*background: #fff;*/
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+section:first-child{
+    padding: 70px 15px;
+    background: #efefef url(../images/letter-a.png) no-repeat center left;
+    background-size: contain;
+}
+
+
+
+.rm_wrapper {
+    padding: 70px 15px;
+    background: #efefef url(../images/letter-l.png) no-repeat center left;
+    background-size: contain;
+    /*max-width: 1170px;*/
+    /*margin: 0 auto;*/
+    /*position: relative;*/
+    /*padding: 0 15px;*/
+}
+
+.rm_container {
+    max-width: 1400px;
+    margin: auto;
+    position: relative;
+    /*padding: 70px 15px;*/
+}
+
+
+.rm_container ul {
+    display: flex;
+    flex-direction: row;
+    /*padding: 0 20px;*/
+    align-items: center;
+
+}
+
+.rm_container ul li {
+    position: relative;
+    overflow: hidden;
+    width: 0;
+    height: 130px;
+    transform: rotate(0deg) !important;
+}
+
+
+.rm_container ul li:nth-child(2) {
+    width: 100%;
+    height: 270px;
+}
+
+
+.rm_container ul li img {
+    filter: grayscale(100%);
+    position: absolute;
+    /*transform-origin: 0 0 !important;*/
+}
+
+.rm_nav a {
+    position: absolute;
+    transform: translateY(-50%);
+    will-change: transform;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+    transition: .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.rm_nav a.rm_next{
+    right: 0;
+}
+.rm_nav a.rm_prev{
+    left: 0;
+}
+
+
+.rm_nav a.rm_next::before,
+.rm_nav a.rm_prev::before{
+    content: '';
+    width: 18px;
+    height: 32px;
+    background-size: cover;
+}
+
+.rm_nav a.rm_next::before{
+    background: url(../images/next.png) no-repeat  center center;
+}
+
+.rm_nav a.rm_prev::before {
+    background: url(../images/prev.png) no-repeat center center;
+
+}
+
+.rm_controls {
+    position: absolute;
+    top: -60px;
+    padding: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.rm_controls a {
+    cursor: pointer;
+    opacity: 1;
+    padding-left: 24px;
+    text-transform: uppercase;
+    height: 20px;
+    float: left;
+}
+
+
+.rm_controls a.rm_play {
+    display: none;
+    background: transparent url(../images/play.png) no-repeat center left;
+}
+
+.rm_controls a.rm_pause {
+    background: transparent url(../images/pause.png) no-repeat center left;
+}
+
+/* Footer Style */
+.footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    font-size: 13px;
+    background: #000;
+    opacity: 0.9;
+    height: 20px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    z-index: 4;
+}
+
+.footer a {
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px #000;
+    color: #ddd;
+    float: right;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer a span {
+    font-weight: bold;
+}
+
+.footer a.left {
+    float: left;
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (min-width: 640px) {
+    .rm_wrapper {
+        padding: 90px 15px;
+    }
+    .rm_container ul {
+        padding: 0 25px;
+    }
+
+    .rm_container ul li {
+        height: 280px;
+    }
+
+    .rm_container ul li:nth-child(1),
+    .rm_container ul li:nth-child(3) {
+        width: 26%;
+    }
+
+    .rm_container ul li:nth-child(2) {
+        height: 360px;
+        width: 48%;
+    }
+
+}
+
+
+@media all and (min-width: 768px) {
+    .rm_wrapper {
+        padding: 120px 15px;
+    }
+
+    .rm_nav a {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+@media all and (min-width: 992px) {
+
+    .rm_container ul li {
+        height: 320px;
+    }
+
+    .rm_container ul li:nth-child(2) {
+        height: 400px;
+    }
+
+    .rm_nav a:hover {
+        opacity: .8;
+    }
+}
+
+
+@media all and (min-width: 1200px) {
+    .rm_wrapper {
+        padding: 135px 15px;
+    }
+
+    .rm_container ul {
+        padding: 0 37px;
+
+    }
+
+    .rm_nav a {
+        width: 75px;
+        height: 75px;
+    }
+
+    .rm_container ul {
+        padding: 0 35px;
+    }
+
+    .rm_container ul li {
+        height: 360px;
+    }
+
+    .rm_container ul li:nth-child(2) {
+        height: 449px;
+    }
+
+}
+
